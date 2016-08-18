@@ -12,9 +12,13 @@ class DHTSensor:
 
     onHumidityChanged = None
     
-    pin = -1
-    
     pollInterval = 1000  # 1 second
+
+    """
+    @flowerChildParameter { ref = "pin", type = "int" }
+    """
+    def __init__(self, pin):
+        self.pin = pin
     
     """    
     documentation of setup method
